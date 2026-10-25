@@ -19,3 +19,4 @@ Early and accurate detection of malignant skin lesions (like melanoma) is critic
 *   Successfully established a high-sensitivity clinical screening threshold (95% Sensitivity) to minimize missed malignant cases.
 
 ## 💻 Live Demo & UI
+<img width="1900" height="942" alt="image" src="https://github.com/user-attachments/assets/c348995d-e96c-46f0-9e85-0ef5d0d55b03" />
