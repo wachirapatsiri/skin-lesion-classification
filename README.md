@@ -149,4 +149,4 @@ Code in this repository is released under the MIT License (see `LICENSE`).
 
 ## Authors
 
-- ([@wachirapatsiri](https://github.com/wachirapatsiri)) - owner
+- **Wachirapat Siriphontangman** ([@wachirapatsiri](https://github.com/wachirapatsiri)) — individual project: data pipeline, model experiments, evaluation, Grad-CAM and Gradio demo.
