@@ -2,13 +2,11 @@
 
 Classifying skin lesions (HAM10000) using a CNN image backbone fused with patient metadata, supported by Grad-CAM visual explanations.
 
-**Live/Demo repo:** [github.com/wachirapatsiri/skin-lesion-classification](https://github.com/wachirapatsiri/skin-lesion-classification)
-
 ## Problem
 Dermatological diagnosis requires both visual inspection of lesions and patient context (such as age, sex, and anatomical site). This project explores whether fusing image features with tabular metadata improves classification accuracy over image-only models.
 
 ## Data & Preprocessing
-- **Dataset:** [HAM10000](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) (7 disease classes, 10,155 images).
+- **Dataset:** [HAM10000](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/DBW86T) (7 disease classes, 10,055 images).
 - **Split Strategy:** Grouped by `lesion_id` to prevent data leakage (images of the same lesion never cross between train/val/test).
 - **Split Ratio:** Train (6,981), Validation (1,532), Test (1,502).
 - **Metadata:** Age (standardized) and One-Hot Encoded sex & localization (19 dimensions total).
@@ -30,7 +28,7 @@ Dermatological diagnosis requires both visual inspection of lesions and patient 
 | E: Logit Adjustment ($\tau=0.85$) | 0.703 | 0.527 | 0.688 | 0.587 |
 | **F: Multimodal Fusion** | **0.829** | **0.702** | **0.694** | **0.545** |
 
-- **Key Finding:** Metadata fusion improved Macro-F1 by **+0.046** over the image-only baseline, outperforming loss-engineering methods that severely traded off overall accuracy.
+- **Key Finding:** Using a threshold chosen on validation data (target sensitivity 95%), the multimodal model reached test sensitivity 0.959 / specificity 0.628 for malignant or pre-malignant (mel, bcc, akiec) vs benign; ROC-AUC 0.928.
 - **Clinical Screening (Malignant detection):** Tuning the decision threshold on the validation set to achieve 95% sensitivity yielded a test specificity of 0.628 (Malignant ROC-AUC 0.928).
 
 ## Limitations
@@ -40,5 +38,5 @@ Dermatological diagnosis requires both visual inspection of lesions and patient 
 ## Tech Stack
 Python, PyTorch, timm (EfficientNet), scikit-learn, pandas, Grad-CAM
 
-## 💻 Live Demo & UI
+## 💻 Demo screenshot
 <img width="1900" height="942" alt="image" src="https://github.com/user-attachments/assets/c348995d-e96c-46f0-9e85-0ef5d0d55b03" />
