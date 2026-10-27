@@ -1,0 +1,5 @@
+Model,ROC_AUC,Target_sens,Val_threshold,Test_sens,Test_spec,Missed
+A_baseline,0.9072,0.9,0.1563,0.8793,0.7434,35/290
+A_baseline,0.9072,0.95,0.0762,0.9552,0.6147,13/290
+F_multimodal,0.9324,0.9,0.1316,0.9138,0.7838,25/290
+F_multimodal,0.9324,0.95,0.0647,0.9586,0.684,12/290
