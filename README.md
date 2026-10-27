@@ -145,6 +145,8 @@ HAM10000 is distributed under **CC BY-NC-SA 4.0 (non-commercial)**:
 
 > Tschandl P., Rosendahl C., Kittler H. *The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions.* Scientific Data 5, 180161 (2018).
 
+Code in this repository is released under the MIT License (see `LICENSE`).
+
 ## Authors
 
 - ([@wachirapatsiri](https://github.com/wachirapatsiri)) - owner
